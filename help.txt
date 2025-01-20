@@ -1,0 +1,25 @@
+Password Manager Script
+
+Overview:
+This is a simple password manager that uses AES-256-CBC encryption to securely store, retrieve, and manage passwords.
+
+Features:
+1. Add a new password.
+2. Retrieve a password.
+3. List all stored accounts.
+4. Delete a password.
+5. Export passwords to a file.
+6. Import passwords from a file.
+7. Show Help.
+8. Exit the program.
+
+How to Use:
+- On first run, the script will prompt you to set a master password.
+- The master password is used to encrypt and decrypt your password store.
+- You can add, retrieve, list, delete, export or import your passwords from the main menu.
+- The encrypted password store is saved as `passwords.enc` in the same directory.
+- The file with the imported passwords has to end with a newline.
+
+Security Considerations:
+- Use a strong master password (at least 12 characters with uppercase, lowercase, numbers, and special characters).
+- The export file contains passwords in plaintext; handle it securely and delete it when no longer needed.
