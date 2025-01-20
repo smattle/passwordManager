@@ -11,7 +11,6 @@ This script is a simple password manager implemented in Bash. It allows users to
 - List all stored account names.
 - Import passwords from a file.
 - Export all stored passwords to a decrypted file.
-- Prevent duplicate account names.
 - Securely encrypt and decrypt passwords using a master password.
 
 ## Requirements
@@ -42,32 +41,20 @@ When you run the script, you'll be prompted with the following menu:
 1. **Add a new password**: Store a password for an account. You’ll be asked for an account name and a password.
 2. **Retrieve a password**: Retrieve a password for a specific account by entering its name.
 3. **List all accounts**: View all stored account names without showing their passwords.
-4. **Import passwords**: Import passwords from a file. Each line in the file must follow the format:
+4. **Delete password**: Delete a password for a specific account by entering its name.
+5. **Export passwords**: Export all stored passwords in decrypted form to a specified file.
+6. **Import passwords**: Import passwords from a file. Each line in the file must follow the format:
    ```
    account:password
    ```
    Invalid or duplicate entries will be skipped.
-5. **Export passwords**: Export all stored passwords in decrypted form to a specified file.
-6. **Help**: View a help message explaining the functionality of the script.
-7. **Exit**: Exit the password manager.
-
-### Example Workflow
-
-1. Run the script:
-   ```bash
-   ./passwordManager.sh
-   ```
-2. Enter the master password. If it’s your first time, the script will prompt you to set a master password.
-3. Choose an option from the menu to perform the desired action.
+7. **Help**: View a help message explaining the functionality of the script.
+8. **Exit**: Exit the password manager.
 
 ## Security Notes
 
 - The master password is required to decrypt the stored passwords. Choose a strong master password and keep it private.
 - The encrypted password file is stored as `passwords.enc`. Without the master password, the data cannot be decrypted.
-- Use the `chmod` command to restrict access to sensitive files:
-  ```bash
-  chmod 600 passwords.enc
-  ```
 
 ## Troubleshooting
 
@@ -75,4 +62,5 @@ When you run the script, you'll be prompted with the following menu:
 
 - **Incorrect master password**: Ensure you’re entering the correct master password.
 - **File not found errors during import/export**: Double-check the file path and permissions.
+- **Import not importing last line**: Ensure the import file ends on a newline
 
