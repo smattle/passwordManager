@@ -2,7 +2,7 @@
 
 ## Overview
 
-This script is a simple password manager implemented in Bash. It allows users to securely store, retrieve, import, export, and manage passwords for various accounts. The script encrypts passwords using OpenSSL with AES-256 encryption, ensuring that your sensitive data is protected.
+This script is a simple password manager implemented in Bash. It allows users to securely store, retrieve, import, export, and manage passwords for various accounts. The script encrypts passwords using OpenSSL with the AES-256 encryption.
 
 ## Features
 
@@ -63,4 +63,3 @@ When you run the script, you'll be prompted with the following menu:
 - **Incorrect master password**: Ensure you’re entering the correct master password.
 - **File not found errors during import/export**: Double-check the file path and permissions.
 - **Import not importing last line**: Ensure the import file ends on a newline
-
